@@ -1,0 +1,65 @@
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { ArrowRight } from "lucide-react"
+
+export function Hero() {
+  return (
+    <section className="relative overflow-hidden bg-secondary">
+      <div className="mx-auto max-w-7xl px-4 lg:px-8">
+        <div className="grid grid-cols-1 items-center gap-8 py-12 lg:grid-cols-2 lg:py-24">
+          {/* Text content */}
+          <div className="max-w-xl">
+            <span className="inline-block text-sm font-medium text-accent uppercase tracking-wider mb-4">
+              New Collection 2026
+            </span>
+            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance">
+              Beautifully Crafted Modern Furniture
+            </h1>
+            <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+              Transform your living space with our curated collection of contemporary furniture. 
+              Designed for comfort, built for longevity.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+                <Link href="/shop">
+                  Shop Now
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <Link href="/about">Learn More</Link>
+              </Button>
+            </div>
+          </div>
+
+          {/* Hero image */}
+          <div className="relative">
+            <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-muted">
+              <img
+                src="/hero-furniture.jpg"
+                alt="Modern living room with contemporary furniture"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            {/* Decorative element */}
+            <div className="absolute -bottom-6 -left-6 hidden lg:block">
+              <div className="rounded-xl bg-card p-4 shadow-lg">
+                <div className="flex items-center gap-3">
+                  <div className="flex -space-x-2">
+                    <div className="h-8 w-8 rounded-full bg-accent/30 ring-2 ring-card" />
+                    <div className="h-8 w-8 rounded-full bg-accent/50 ring-2 ring-card" />
+                    <div className="h-8 w-8 rounded-full bg-accent/70 ring-2 ring-card" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">2,500+</p>
+                    <p className="text-xs text-muted-foreground">Happy Customers</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
