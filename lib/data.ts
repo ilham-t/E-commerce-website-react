@@ -152,53 +152,6 @@ export const trendingProducts: Product[] = [
   }
 ]
 
-// All products combined for shop page
-export const allProducts: Product[] = [
-  ...products,
-  ...trendingProducts,
-  {
-    id: 13,
-    name: "Office Desk Chair",
-    price: 459,
-    originalPrice: 549,
-    image: "/products/chair-2.jpg",
-    rating: 4.7,
-    reviews: 189,
-    category: "Office",
-    badge: "Sale"
-  },
-  {
-    id: 14,
-    name: "Nightstand Set",
-    price: 299,
-    image: "/products/table-3.jpg",
-    rating: 4.6,
-    reviews: 112,
-    category: "Bedroom"
-  },
-  {
-    id: 15,
-    name: "Outdoor Lounge Set",
-    price: 1599,
-    image: "/products/sofa-1.jpg",
-    rating: 4.8,
-    reviews: 76,
-    category: "Outdoor",
-    badge: "New"
-  },
-  {
-    id: 16,
-    name: "Pendant Light Set",
-    price: 349,
-    originalPrice: 429,
-    image: "/products/lamp-1.jpg",
-    rating: 4.7,
-    reviews: 145,
-    category: "Lighting",
-    badge: "Sale"
-  }
-]
-
 export const categories: Category[] = [
   {
     id: 1,
